@@ -6,6 +6,7 @@ import io
 import os
 import shutil
 import utils as utils
+from turn import get_ice_servers
 
 
 MODEL_NAME = "sign_detection.pt"
@@ -133,7 +134,7 @@ if option == RADIO_WEBCAM:
         key="example",
         mode = WebRtcMode.SENDRECV,
         video_processor_factory=lambda : utils.MyVideoTransformer(conf,model),
-        rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+        rtc_configuration={"iceServers": get_ice_servers()},
         media_stream_constraints={"video": True, "audio": False},
         async_processing  =True
     )
