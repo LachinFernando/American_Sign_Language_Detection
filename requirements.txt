@@ -1,5 +1,4 @@
 ffmpeg==1.4
 moviepy==1.0.3
-opencv-python==4.8.0.76
 streamlit-webrtc==0.47.0
 ultralytics==8.0.181
