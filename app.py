@@ -40,6 +40,7 @@ def get_predictions(source_path):
             shutil.copy(os.path.join(PREDICTION_PATH, item), os.path.join(PREDICTION_NEW_PATH, item))
             if item.endswith(VIDEO_EXTENSION):
                 utils.convert_mp4_H264(os.path.join(PREDICTION_NEW_PATH, item), os.path.join(PREDICTION_NEW_PATH, FINAL_PREDICTION_VIDEO))
+                print("Video Conversion Complete!!!!!!")
             os.remove(os.path.join(PREDICTION_PATH, item))
 
     #then remove the predict director
