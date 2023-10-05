@@ -1,5 +1,6 @@
 import logging
 import os
+import streamlit as st
 
 import streamlit as st
 from twilio.base.exceptions import TwilioRestException
@@ -8,7 +9,7 @@ from twilio.rest import Client
 logger = logging.getLogger(__name__)
 
 os.environ["TWILIO_ACCOUNT_SID"] = "AC4e2728dad910c942fb8bcc1b8fdf03d8"
-os.environ["TWILIO_AUTH_TOKEN"] = "82fce13e50e8a2eae0aa8f3fe3368838"
+os.environ["TWILIO_AUTH_TOKEN"] = st.secrets["database"]["TWILIO_AUTH_KEY"]
 
 def get_ice_servers():
     """Use Twilio's TURN server because Streamlit Community Cloud has changed
