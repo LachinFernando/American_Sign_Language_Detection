@@ -8,7 +8,7 @@ from twilio.rest import Client
 logger = logging.getLogger(__name__)
 
 os.environ["TWILIO_ACCOUNT_SID"] = "AC4e2728dad910c942fb8bcc1b8fdf03d8"
-os.environ["TWILIO_AUTH_TOKEN"] = "7b25aba181fd99a100f801e41a91e80b"
+os.environ["TWILIO_AUTH_TOKEN"] = "d564a221d74529066c7eaf487e1ccf8a"
 
 def get_ice_servers():
     """Use Twilio's TURN server because Streamlit Community Cloud has changed
